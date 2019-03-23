@@ -38,7 +38,7 @@ object EMIConverter {
 				sql("DROP TABLE IF EXISTS emi_convertor")
 				sql("CREATE TABLE emi_convertor (accountId string, accountHolderName string, amount float, transactionTime string)")
 
-				val Array(brokers, groupId, topics) = Array("localhost:9092","group1","transcations")
+				val Array(brokers, groupId, topics) = Array("localhost:9092","group1","transactions")
 
 				// Create direct kafka stream with brokers and topics
 				val topicsSet = topics.split(",").toSet
