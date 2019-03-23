@@ -35,7 +35,7 @@ object EMIConverter {
 				import spark.implicits._
 				import spark.sql
 
-				sql("DROP table emi_convertor")
+				sql("DROP TABLE IF EXISTS emi_convertor")
 				sql("CREATE TABLE emi_convertor (accountId string, accountHolderName string, amount float, transactionTime string)")
 
 				val Array(brokers, groupId, topics) = Array("localhost:9092","group1","transcations")
